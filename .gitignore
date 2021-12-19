@@ -1,0 +1,8 @@
+.project
+.metadata
+.classpath
+.settings/
+bin
+db
+lib
+/laststate.bin
