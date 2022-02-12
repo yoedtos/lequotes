@@ -2,7 +2,6 @@
 .metadata
 .classpath
 .settings/
-bin
+target/
 db
-lib
 /laststate.bin

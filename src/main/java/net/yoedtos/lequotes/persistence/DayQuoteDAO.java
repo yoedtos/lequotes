@@ -47,8 +47,8 @@ public class DayQuoteDAO extends DAO {
 		executeStatement(sql);		
 	}
 	
-	public DayQuote load(DayQuote dayQuote, int id) throws DAOException, IOException {
-		
+	public DayQuote load(DayQuote dayQuote) throws DAOException, IOException {
+		int id = dayQuote.getId();
 		String sql = "SELECT * FROM quotes WHERE id = ?";
 		Object[] params = {id};
 		try {

@@ -22,21 +22,21 @@ public class DayQuoteService extends Service {
 		
 		try {
 			lastState = FileUtils.loadState();
-			id = lastState.getLastid();
+			dayQuote.setId(lastState.getLastid());
 		} catch (ClassNotFoundException | IOException e) {
 			LOOGER.error(e.getMessage());
-			id = 1;
+			dayQuote.setId(1);
 		}
 		
 		try {			
-			dayQuoteDao.load(dayQuote, id);
+			dayQuoteDao.load(dayQuote);
 			quoteTxt = getTxtQuotes(dayQuote);
 		} catch (DAOException | IOException e1) {
 			LOOGER.error(e1.getMessage());
 			throw new AppException("Failed to get Quotes");
 		}
 		
-		LOOGER.info("ID = " + id);
+		LOOGER.info("ID = " + dayQuote.getId());
 		return quoteTxt;	
 	}
 	
@@ -44,9 +44,10 @@ public class DayQuoteService extends Service {
 		dayQuote = getDayQuote();
 		id = dayQuote.getId();
 		id--;
+		dayQuote.setId(id);
 	
 		try {
-			dayQuoteDao.load(dayQuote, id);
+			dayQuoteDao.load(dayQuote);
 			quoteTxt = getTxtQuotes(dayQuote);
 		} catch (DAOException | IOException e) {
 			LOOGER.error(e.getMessage());
@@ -62,9 +63,10 @@ public class DayQuoteService extends Service {
 		dayQuote = getDayQuote();
 		id = dayQuote.getId();
 		id++;
+		dayQuote.setId(id);
 		
 		try {
-			dayQuoteDao.load(dayQuote, id);
+			dayQuoteDao.load(dayQuote);
 			quoteTxt = getTxtQuotes(dayQuote);
 		} catch (DAOException | IOException e) {
 			LOOGER.error(e.getMessage());

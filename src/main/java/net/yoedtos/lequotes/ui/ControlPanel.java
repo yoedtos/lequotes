@@ -73,7 +73,7 @@ public class ControlPanel extends JPanel {
 		});
 		buttons.add(btnPrevious);
 		
-		btnNext = new JButton(Images.NEXT);
+		btnNext = new JButton(ImagesB.NEXT);
 		btnNext.addActionListener(new ActionListener() {
 			
 			@Override
@@ -131,7 +131,7 @@ public class ControlPanel extends JPanel {
 		});
 		buttons.add(btnStop);
 		
-		btnCapture = new JButton(Images.CAPTURE);
+		btnCapture = new JButton(ImagesB.CAPTURE);
 		btnCapture.addActionListener(new ActionListener() {
 			
 			@Override

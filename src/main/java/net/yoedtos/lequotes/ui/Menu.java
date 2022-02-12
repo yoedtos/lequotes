@@ -23,7 +23,7 @@ public class Menu extends JMenuBar {
 		system.setPreferredSize(size);
 		
 		JMenuItem quit = new JMenuItem(new QuitAction());
-		quit.setIcon(Images.EXIT);
+		quit.setIcon(ImagesB.EXIT);
 		quit.setText("Quit");
 		quit.setMnemonic(KeyEvent.VK_Q);
 		system.add(quit);
@@ -34,7 +34,7 @@ public class Menu extends JMenuBar {
 		help.setPreferredSize(size);
 		
 		JMenuItem about = new JMenuItem(new AboutAction());
-		about.setIcon(Images.ABOUT);
+		about.setIcon(ImagesB.ABOUT);
 		about.setText("About");
 		about.setMnemonic('A');
 		help.add(about);

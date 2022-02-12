@@ -4,7 +4,7 @@ Made with following API
  - H2 database
  - Commons IO
  - Javazoom JL
- - Log4j
+ - Logback
  
 ***
 Adding resources(txt and mp3 files) to database
@@ -23,5 +23,12 @@ In sample folder has two pair of files
 #### Screenshot
 ![alt text](LeQuotes.png?raw=true)
 
-<!-- ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true) -->
 
+#### Note 
+Maybe you need to install manually the JARs into your local Maven repository. To do so, run the follow command
+
+`mvn install:install-file -Dfile=extras/jl1.0.1.jar -DgroupId=javazoom -DartifactId=jlayer -Dversion=1.0.1 -Dpackaging=jar`
+
+`mvn install:install-file -Dfile=extras/tritonus_share-0.3.6.jar -DgroupId=org.tritonus -DartifactId=tritonus-share -Dversion=0.3.6 -Dpackaging=jar`
+
+`mvn install:install-file -Dfile=extras/mp3spi1.9.5.jar -DgroupId=javazoom -DartifactId=mp3spi -Dversion=1.9.5 -Dpackaging=jar`
